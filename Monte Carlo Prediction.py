@@ -76,8 +76,8 @@ plt.ylabel("Price")
 plt.show()
 
 day_n_prices=simulation_df.iloc[-1]
-lower_bound=np.percentile(day_n_prices, 2)
-upper_bound=np.percentile(day_n_prices, 98)
+lower_bound=np.percentile(day_n_prices, 2.5)
+upper_bound=np.percentile(day_n_prices, 97.5)
 mean_price=np.mean(day_n_prices)
 print(f'The expected price for {num_days} days later is: {mean_price}')
 print(f'the 95% confidence interval for {num_days} days is: {lower_bound},{upper_bound}')
